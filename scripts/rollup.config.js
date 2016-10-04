@@ -33,6 +33,8 @@ var rollupConfig = {
    */
   dest: 'main.js',
 
+  useStrict: false,
+
   /**
    * plugins: Array of plugin objects, or a single plugin object.
    * See https://github.com/rollup/rollup/wiki/Plugins for more info.

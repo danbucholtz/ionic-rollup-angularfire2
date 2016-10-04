@@ -122,3 +122,21 @@ commonjs({
 }),
 ...
 ```
+
+Firebase has a known issue where it doesn't support strict mode, so disable that in rollup config as well off of the `rollupConfig` object.
+
+```
+...
+  useStrict: false,
+...
+  plugins: [
+```
+
+
+Now that we've successfully been able to build the, let's run `ionic serve` and test it out in the browser.
+
+```
+ionic serve
+```
+
+You now have a working `Angularfire2` instance.
