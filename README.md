@@ -72,15 +72,6 @@ Create a directory called `scripts` in the project root, and then create a file 
 
 Copy and paste the content from `./node_modules/@ionic/app-scripts/config/rollup.config.js` to `./scripts/rollup.config.js`
 
-Change line one from this
-```
-var ngTemplate = require('../dist/plugins/ng-template').ngTemplate;
-```
-
-to this
-```
-var ngTemplate = require('../node_modules/@ionic/app-scripts/dist/plugins/ng-template').ngTemplate;
-```
 
 For fun and validation that we're using the correct rollup config, throw a log statement at the top of `./scripts/rollup.config.js`
 
@@ -133,7 +124,7 @@ Firebase has a known issue where it doesn't support strict mode, so disable that
 ```
 
 
-Now that we've successfully been able to build the, let's run `ionic serve` and test it out in the browser.
+Now that we've successfully been able to build the app, let's run `ionic serve` and test it out in the browser.
 
 ```
 ionic serve

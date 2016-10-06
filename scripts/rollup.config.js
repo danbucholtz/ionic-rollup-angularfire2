@@ -1,6 +1,5 @@
 console.log('Hello from the other side; I must have called 1000 times');
 
-var ngTemplate = require('../node_modules/@ionic/app-scripts/dist/plugins/ng-template').ngTemplate;
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
 var globals = require('rollup-plugin-node-globals');
@@ -15,7 +14,7 @@ var rollupConfig = {
    * be included, along with the minimum necessary code
    * from its dependencies
    */
-  entry: './.tmp/app/main.dev.js',
+  entry: 'src/app/main.dev.js',
 
   /**
    * sourceMap: If true, a separate sourcemap file will
@@ -40,7 +39,6 @@ var rollupConfig = {
    * See https://github.com/rollup/rollup/wiki/Plugins for more info.
    */
   plugins: [
-    ngTemplate(),
     builtins(),
     commonjs({
       namedExports: {
